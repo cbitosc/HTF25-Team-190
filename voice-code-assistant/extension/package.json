@@ -1,0 +1,34 @@
+{
+  "name": "voice-code-assistant",
+  "displayName": "Voice Code Assistant",
+  "description": "Control VS Code and generate code using voice commands.",
+  "version": "1.0.0",
+  "publisher": "yourname",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:voiceAssistant.start"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "voiceCodeAssistant.start",
+        "title": "🎤 Start Voice Code Assistant"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "axios": "^1.12.2",
+    "typescript": "^5.2.2"
+  }
+}
